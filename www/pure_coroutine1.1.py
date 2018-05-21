@@ -137,7 +137,7 @@ async def run(loop, raw_urls):
 	global log
 
 	tasks = []
-	sem = asyncio.Semaphore(1000)
+	sem = asyncio.Semaphore(500)
 	len_url = len(raw_urls)
 	print('Handle URL Counts:%s' % len_url)
 	print('Save file %s' % os.path.join(RESULT_FOLDER, RESULT_FILE))
@@ -185,7 +185,7 @@ def main():
 	s = time.time()
 	# with open(RAW_URL_FILE, 'r') as fin:
 	# 	urls = [url.strip('\n') for url in fin.readlines()]
-	urls = ['localhost:9000/']*10000
+	urls = ['localhost:8080/']*10000
 	loop = asyncio.get_event_loop()
 	# init()
 	future = asyncio.ensure_future(run(loop, urls))

@@ -18,8 +18,8 @@ SERVER_PORT = 8080
 
 
 logger = My_Logger(os.path.splitext(__name__)[0] + '.log').get_logger()
-def log(msg):
-	logger.info(msg)
+def log(msg, file=''):
+	logger.info('File:%s, Log:%s' % (file, msg)
 
 
 async def init(loop):
@@ -33,3 +33,8 @@ async def init(loop):
 loop = asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
 loop.run_forever()
+# if __name__ == '__main__':
+# 	print(__name__)
+# else:
+# 	print(__name__)
+# 	print('import ok')

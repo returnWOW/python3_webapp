@@ -25,3 +25,7 @@
 2018-05-15 18:16:42,956 pure_coroutine1.1.py [line:26 INFO Exception:Cannot connect to host localhost:9000 ssl:False [Connect call failed ('::1', 9000)] Index:8 URL:http://localhost:9000/
 2018-05-15 18:16:45,236 pure_coroutine1.1.py [line:26 INFO *************************Start url count:10000*************************
 2018-05-15 18:16:46,251 pure_coroutine1.1.py [line:26 INFO Exception:Cannot connect to host localhost:9000 ssl:False [Connect call failed ('::1', 9000)] Index:2 URL:http://localhost:9000/
+2018-05-16 16:03:11,114 pure_coroutine1.1.py [line:26 INFO *************************Start url count:10000*************************
+2018-05-16 16:03:13,215 pure_coroutine1.1.py [line:26 INFO Exception:Cannot connect to host localhost:9000 ssl:False [Connect call failed ('::1', 9000)] Index:1 URL:http://localhost:9000/
+2018-05-16 16:03:32,165 pure_coroutine1.1.py [line:26 INFO *************************Start url count:10000*************************
+2018-05-16 16:04:11,316 pure_coroutine1.1.py [line:26 INFO *************************END*************************
