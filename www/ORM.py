@@ -42,6 +42,7 @@ async def select(sql, args, size=None):
 
 		return rs
 
+
 async def excute(sql, args):
 	log(sql + ' args:' +','.join(args))
 	global __pool
@@ -55,3 +56,32 @@ async def excute(sql, args):
 			raise
 
 	return affected
+
+
+class User(Model):
+	__table__ = 'users'
+
+	id = IntegerField(primary_key=True)
+	name = StringField()
+
+
+class Field(object):
+	def __init__(self, name, column_type, primary_key, default):
+		self.name = name
+		self.column_type = column_type
+		self.primary_key = primary_key
+		self.default = default
+
+	def __str__(self):
+		return '<%s %s:%s>' % (self.__class__.__name__, self.column_type, self.name)
+
+
+class StringField(Field):
+	def __init__(self, name=None, primary_key=False, default=None, ddl='varchar(100)'):
+		super(StringField, self).__init__(name, ddl, primary_key, default)
+
+
+class IntegerField(Field):
+	def __init__(self, name=None, primary_key=False, default=None, ddl='bigint'):
+		super(IntegerField, self).__init__(name, ddl, primary_key, default)
+ 
